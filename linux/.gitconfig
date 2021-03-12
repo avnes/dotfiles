@@ -1,0 +1,8 @@
+[user]
+	name = Audun Nes
+	email = audun.nes@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status

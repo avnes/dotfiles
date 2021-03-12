@@ -1,0 +1,16 @@
+byi8220.indented-block-highlighting
+CoenraadS.bracket-pair-colorizer-2
+DavidAnson.vscode-markdownlint
+eamodio.gitlens
+hashicorp.terraform
+himanoa.Python-autopep8
+HookyQR.beautify
+iciclesoft.workspacesort
+ms-azuretools.vscode-docker
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-vscode.hexeditor
+redhat.vscode-xml
+redhat.vscode-yaml
+ZainChen.json
