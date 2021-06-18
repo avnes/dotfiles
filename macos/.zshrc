@@ -2,7 +2,7 @@ export ZSH="/Users/audun/.oh-my-zsh"
 
 eval $(thefuck --alias)
 
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 plugins=(aws git kubectl thefuck poetry zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
@@ -37,3 +37,12 @@ export AWS_PROFILE=saml
 alias get-identity='aws sts get-caller-identity'
 alias fck='fuck'
 export HISTORY_IGNORE="(cat|AWS|SECRET|KEY|base64|secret|export)"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+eval "$(starship init zsh)"
