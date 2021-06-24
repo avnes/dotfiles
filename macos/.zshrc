@@ -45,4 +45,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# Use starship theme in ZSH
 eval "$(starship init zsh)"
+
+# Tab completion for Flux CLI
+command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
