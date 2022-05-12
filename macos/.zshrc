@@ -3,7 +3,7 @@ export ZSH="/Users/audun/.oh-my-zsh"
 eval $(thefuck --alias)
 
 ZSH_THEME="agnoster"
-plugins=(aws git kubectl thefuck poetry zsh-autosuggestions)
+plugins=(aws git kubectl thefuck poetry zsh-autosuggestions kubectx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,8 +45,16 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# Use starship theme in ZSH
 eval "$(starship init zsh)"
 
-# Tab completion for Flux CLI
 command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
+
+KUBECONFIG=/Users/audun/.kube/volantis.config:/Users/audun/.kube/docker-desktop.config; export KUBECONFIG
+
+alias kx='kubectx'
+alias kxv='kubectx volantis-admin'
+alias kxd='kubectx docker-desktop'
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
