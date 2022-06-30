@@ -8,11 +8,10 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 
-KUBECONFIG=/home/audun/.kube/volantis.config:/home/audun/.kube/hellman-saml.config:/home/audun/.kube/playground.config; export KUBECONFIG
+KUBECONFIG=/home/audun/.kube/volantis.config:/home/audun/.kube/playground.config; export KUBECONFIG
 
 alias kx='kubectx'
 alias kxv='kubectx volantis-admin'
-alias kxh='kubectx hellman-saml'
 alias kxp='kubectx playground'
 
 export GOROOT=/usr/lib/golang
