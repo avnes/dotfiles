@@ -54,6 +54,7 @@ KUBECONFIG=/Users/audun/.kube/volantis.config:/Users/audun/.kube/docker-desktop.
 alias kx='kubectx'
 alias kxv='kubectx volantis-admin'
 alias kxd='kubectx docker-desktop'
+alias yolo='git add -A && git commit -a -m "$(curl --silent --fail http://whatthecommit.com/index.txt)"'
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
