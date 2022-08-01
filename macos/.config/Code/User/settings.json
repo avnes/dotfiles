@@ -9,8 +9,7 @@
     "files.trimTrailingWhitespace": true,
     "editor.trimAutoWhitespace": true,
     "terminal.integrated.fontFamily": "Source Code Pro",
-    "python.pythonPath": "~/.virtualenvs/default/bin/python",
-    "python.venvPath": "~/.virtualenvs/default",
+    "python.pythonPath": "/usr/bin/python3",
     "python.linting.enabled": true,
     "python.linting.pep8Enabled": false,
     "python.linting.flake8Enabled": true,
@@ -34,5 +33,8 @@
         "suppressResultsExplorerNotice": false,
         "suppressShowKeyBindingsNotice": true
     },
-    "workbench.iconTheme": null
+    "workbench.iconTheme": null,
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "window.zoomLevel": 1
 }
