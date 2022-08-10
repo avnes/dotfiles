@@ -2,5 +2,4 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [kubernetes]
-format = 'k8s ctx: [$context( \($namespace\))]($style) // '
 disabled = false
