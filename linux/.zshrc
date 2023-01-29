@@ -8,16 +8,16 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 
-KUBECONFIG=/home/audun/.kube/volantis.config:/home/audun/.kube/playground.config; export KUBECONFIG
+KUBECONFIG=$(ls $HOME/.kube/*.config | tr '\n' ':')
+export KUBECONFIG
 
 alias kx='kubectx'
-alias kxv='kubectx volantis-admin'
-alias kxp='kubectx playground'
-alias yolo='git add -A && git commit -a -m "$(curl --silent --fail http://whatthecommit.com/index.txt)"'
+alias yolo='git add -A && git commit -a -m "$(curl --silent --fail https://whatthecommit.com/index.txt)"'
 
-export GOROOT=/usr/lib/golang
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-export AWS_PROFILE=saml
+source <(helm completion zsh)
 
 export EDITOR=vi
