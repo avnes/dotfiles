@@ -1,14 +1,15 @@
 export ZSH="/Users/$USER/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
-plugins=(git kubectl poetry zsh-autosuggestions kubectx)
+plugins=(git kubectl poetry zsh-autosuggestions kubectx thefuck)
 
 source $ZSH/oh-my-zsh.sh
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-PATH="$PATH:/usr/local/bin:/Users/$USER/bin:/Users/$USER/homebrew/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+PATH="$PATH:/usr/local/bin:/Users/$USER/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH
-
-eval "$(/Users/$USER/homebrew/bin/brew shellenv)"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
@@ -35,14 +36,18 @@ alias ll='ls -l'
 alias getkey='cat vault.key | openssl rsautl -decrypt -inkey /Users/$USER/.ssh/ansible_key'
 alias python=python3
 alias kx='kubectx'
-alias yolo='git add -A && git commit -a -m "$(curl --silent --fail http://whatthecommit.com/index.txt)"'
+alias gas='go-aws-sso -p saml --persist'
+alias yolo='git add -A && git commit -a -m "$(curl --silent --fail https://whatthecommit.com/index.txt)"'
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export EDITOR=vim
+export AWS_PROFILE=saml
 
 source <(helm completion zsh)
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/$USER/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH=$PATH:/opt/homebrew/bin
+
+source /opt/homebrew/opt/asdf/libexec/asdf.sh
