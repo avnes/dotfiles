@@ -12,6 +12,6 @@
 [commit]
 	gpgsign = true
 [gpg "ssh"]
-	allowedSignersFile = /Users/audun/.ssh/allowedSignersFile
+	allowedSignersFile = /home/audun/.ssh/allowedSignersFile
 [pull]
 	rebase = false
