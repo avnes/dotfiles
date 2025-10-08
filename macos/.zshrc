@@ -1,7 +1,7 @@
 export ZSH="/Users/$USER/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
-plugins=(git kubectl poetry zsh-autosuggestions kubectx thefuck)
+plugins=(git kubectl poetry zsh-autosuggestions kubectx aws direnv)
 
 source $ZSH/oh-my-zsh.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -33,7 +33,6 @@ KUBECONFIG=$(ls $HOME/.kube/*.config | tr '\n' ':')
 export KUBECONFIG
 
 alias ll='ls -l'
-alias getkey='cat vault.key | openssl rsautl -decrypt -inkey /Users/$USER/.ssh/ansible_key'
 alias python=python3
 alias kx='kubectx'
 alias gas='go-aws-sso -p saml --persist'
@@ -50,4 +49,7 @@ source <(helm completion zsh)
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH=$PATH:/opt/homebrew/bin
 
-source /opt/homebrew/opt/asdf/libexec/asdf.sh
+#eval "$(direnv hook zsh)"
+
+alias kubectl="kubecolor"
+alias docker="podman"
