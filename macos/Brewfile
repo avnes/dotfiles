@@ -1,90 +1,140 @@
 tap "1password/tap"
+tap "anomalyco/tap"
 tap "azure/azure-workload-identity"
-tap "derailed/k9s"
 tap "derailed/popeye"
 tap "dotenv-org/brew"
-tap "dotenvx/brew"
 tap "fluxcd/tap"
+tap "homebrew/services"
 tap "legit-labs/legit-labs"
+tap "loft-sh/tap"
 tap "one2nc/cloudlens"
-tap "robusta-dev/krr"
 tap "theurichde/go-aws-sso"
+# Run your GitHub Actions locally
 brew "act"
-brew "age"
+# Record and share terminal sessions
 brew "asciinema"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Microsoft Azure CLI 2.0
 brew "azure-cli"
+# Install RubyGems as Homebrew formulae
 brew "brew-gem"
+# Prevent cloud misconfigurations during build-time for IaC tools
 brew "checkov"
+# Home for bootstrapping, AMI, EKS, and other helpers in Cluster API Provider AWS
+brew "clusterawsadm"
+# Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle
+brew "clusterctl"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
-brew "cryptography"
+# Enterprise friendly way of detecting and preventing secrets in code
 brew "detect-secrets"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Simple command-line tool for creating clusters on Amazon EKS
 brew "eksctl"
+# GitHub command-line tool
 brew "gh"
+# Audit git repos for secrets
 brew "gitleaks"
+# GNU implementation of the famous stream editor
 brew "gnu-sed"
-brew "unbound"
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
+# Fast linters runner for Go
 brew "golangci-lint"
+# Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Kubernetes package manager
 brew "helm"
+# C/C++ and Java libraries for Unicode and globalization
 brew "icu4c@76"
+# Cost estimates for Terraform, Terragrunt, and CloudFormation
 brew "infracost"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Domain specific configuration language for defining JSON data
 brew "jsonnet"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Run local Kubernetes cluster in Docker
 brew "kind"
+# Fast and secure open-source backup
+brew "kopia"
+# CLI tool to discover unused Kubernetes resources
 brew "kor"
+# Colorize your kubectl output
 brew "kubecolor"
+# FAST Kubernetes manifests validator, with support for Custom Resources!
 brew "kubeconform"
+# Collection of commands to fill in the gaps between Terraform, Helm, and Kubectl
 brew "kubergrunt"
+# Kubernetes command-line interface
 brew "kubernetes-cli"
+# Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
-brew "libpq"
-brew "nmap"
+# Postgres C API library
+brew "libpq", link: true
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Development kit for the Java programming language
 brew "openjdk"
+# Drop-in replacement for Terraform. Infrastructure as Code Tool
 brew "opentofu"
+# Apache Parquet command-line tools and utilities
 brew "parquet-cli"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Python package management tool
 brew "poetry"
-brew "postgresql@14"
+# Command-line shell and scripting language
+brew "powershell", link: false
+# Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Password generator
 brew "pwgen"
+# Python version management
 brew "pyenv"
-brew "python@3.11"
+# Persistent key-value database, with built-in net interface
 brew "redis"
+# Automated dependency updates. Flexible so you don't need to be
 brew "renovate"
+# Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Editor of encrypted files
 brew "sops"
+# Cross-shell prompt for astronauts
 brew "starship"
-brew "terraform"
+# Tool to generate documentation from Terraform modules
 brew "terraform-docs"
+# Thin wrapper for Terraform e.g. for locking state
 brew "terragrunt"
+# Linter for Terraform files
 brew "tflint"
-brew "tfsec"
+# Programmatically correct mistyped console commands
 brew "thefuck"
+# Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
-brew "trivy"
+# Disaster recovery for Kubernetes resources and persistent volumes
 brew "velero"
+# Executes a program periodically, showing output fullscreen
 brew "watch"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
-brew "azure/azure-workload-identity/azwi"
-brew "derailed/k9s/k9s"
-brew "derailed/popeye/popeye"
-brew "dotenv-org/brew/dotenv-vault"
-brew "dotenvx/brew/dotenvx"
-brew "fluxcd/tap/flux"
-brew "one2nc/cloudlens/cloudlens"
-brew "robusta-dev/krr/krr"
-brew "theurichde/go-aws-sso/go-aws-sso"
+# Command-line interface for 1Password
 cask "1password-cli"
+# JDK from the Java User Group (JUG)
+cask "adoptopenjdk"
+# Interactive CLI tool for AWS Single Sign-On (SSO)
+cask "theurichde/go-aws-sso/go-aws-sso"
+# Command-line shell and scripting language
 cask "powershell"
 vscode "4ops.terraform"
 vscode "adamhartford.vscode-base64"
-vscode "aquasecurityofficial.trivy-vulnerability-scanner"
 vscode "arjun.swagger-viewer"
 vscode "aykutsarac.jsoncrack-vscode"
 vscode "byi8220.indented-block-highlighting"
@@ -92,7 +142,6 @@ vscode "davidanson.vscode-markdownlint"
 vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "formulahendry.code-runner"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "golang.go"
@@ -102,42 +151,19 @@ vscode "iciclesoft.workspacesort"
 vscode "iliazeus.vscode-ansi"
 vscode "jtr.vscode-position"
 vscode "mermaidchart.vscode-mermaid-chart"
-vscode "ms-azure-load-testing.microsoft-testing"
-vscode "ms-azuretools.azure-dev"
-vscode "ms-azuretools.vscode-azure-github-copilot"
-vscode "ms-azuretools.vscode-azure-mcp-server"
-vscode "ms-azuretools.vscode-azureappservice"
-vscode "ms-azuretools.vscode-azurecontainerapps"
-vscode "ms-azuretools.vscode-azurefunctions"
-vscode "ms-azuretools.vscode-azureresourcegroups"
-vscode "ms-azuretools.vscode-azurestaticwebapps"
-vscode "ms-azuretools.vscode-azurestorage"
-vscode "ms-azuretools.vscode-azurevirtualmachines"
 vscode "ms-azuretools.vscode-containers"
-vscode "ms-azuretools.vscode-cosmosdb"
 vscode "ms-azuretools.vscode-docker"
-vscode "ms-dotnettools.csdevkit"
-vscode "ms-dotnettools.csharp"
-vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-python.vscode-python-envs"
 vscode "ms-toolsai.jupyter"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpp-devtools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.hexeditor"
 vscode "ms-vscode.makefile-tools"
-vscode "ms-vscode.vscode-node-azure-pack"
-vscode "ms-windows-ai-studio.windows-ai-studio"
 vscode "redhat.vscode-yaml"
 vscode "ryanolsonx.solarized"
 vscode "solomonkinard.git-blame"
 vscode "streetsidesoftware.code-spell-checker"
-vscode "teamsdevapp.vscode-ai-foundry"
 vscode "vstirbu.vscode-mermaid-preview"
 vscode "yzhang.markdown-all-in-one"
 vscode "zainchen.json"
@@ -147,3 +173,6 @@ go "golang.org/x/tools/gopls"
 go "github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb"
 go "honnef.co/go/tools/cmd/staticcheck"
 go "github.com/swaggo/swag/cmd/swag"
+npm "dotenv-cli"
+npm "dotenv"
+npm "markserv"
