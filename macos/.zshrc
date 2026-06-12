@@ -1,15 +1,16 @@
 export ZSH="/Users/$USER/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
-plugins=(git kubectl poetry zsh-autosuggestions kubectx aws direnv)
+plugins=(git kubectl poetry zsh-autosuggestions kubectx aws direnv alias-tips)
 
+DISABLE_MAGIC_FUNCTIONS="true"
 source $ZSH/oh-my-zsh.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 PATH="$PATH:/usr/local/bin:/Users/$USER/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
