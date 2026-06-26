@@ -1,13 +1,13 @@
 tap "1password/tap"
 tap "anomalyco/tap"
-tap "azure/azure-workload-identity"
+tap "azure/azure-workload-identity", "https://github.com/Azure/homebrew-azure-workload-identity"
+tap "controlplaneio-fluxcd/tap"
 tap "derailed/popeye"
 tap "dotenv-org/brew"
 tap "fluxcd/tap"
 tap "homebrew/services"
 tap "legit-labs/legit-labs"
 tap "loft-sh/tap"
-tap "one2nc/cloudlens"
 tap "theurichde/go-aws-sso"
 # Run your GitHub Actions locally
 brew "act"
@@ -73,6 +73,8 @@ brew "kubeconform"
 brew "kubergrunt"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Much more powerful alternative to kubectx and kubens
+brew "kubie"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
 # Postgres C API library
@@ -113,8 +115,6 @@ brew "terraform-docs"
 brew "terragrunt"
 # Linter for Terraform files
 brew "tflint"
-# Programmatically correct mistyped console commands
-brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -125,6 +125,8 @@ brew "velero"
 brew "watch"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Flux Operator CLI
+brew "controlplaneio-fluxcd/tap/flux-operator", trusted: true
 # Command-line interface for 1Password
 cask "1password-cli"
 # JDK from the Java User Group (JUG)
@@ -173,6 +175,4 @@ go "golang.org/x/tools/gopls"
 go "github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb"
 go "honnef.co/go/tools/cmd/staticcheck"
 go "github.com/swaggo/swag/cmd/swag"
-npm "dotenv-cli"
-npm "dotenv"
 npm "markserv"
