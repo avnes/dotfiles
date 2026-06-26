@@ -35,7 +35,7 @@ export KUBECONFIG
 
 alias ll='ls -l'
 alias python=python3
-alias kx='kubectx'
+alias kx='kubie ctx'
 alias gas='go-aws-sso -p saml --persist'
 alias yolo='git add -A && git commit -a -m "$(curl --silent --fail https://whatthecommit.com/index.txt)"'
 
@@ -50,7 +50,9 @@ source <(helm completion zsh)
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH=$PATH:/opt/homebrew/bin
 
-#eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
+
+source <(kubie generate-completion)
 
 alias kubectl="kubecolor"
 alias docker="podman"
