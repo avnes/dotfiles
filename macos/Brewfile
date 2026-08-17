@@ -8,6 +8,7 @@ tap "fluxcd/tap"
 tap "homebrew/services"
 tap "legit-labs/legit-labs"
 tap "loft-sh/tap"
+tap "one2nc/cloudlens"
 tap "theurichde/go-aws-sso"
 # Run your GitHub Actions locally
 brew "act"
@@ -29,6 +30,8 @@ brew "clusterawsadm"
 brew "clusterctl"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# CLI and validation tools for Kubelet Container Runtime Interface (CRI)
+brew "cri-tools"
 # Enterprise friendly way of detecting and preventing secrets in code
 brew "detect-secrets"
 # Load/unload environment variables based on $PWD
@@ -115,6 +118,8 @@ brew "terraform-docs"
 brew "terragrunt"
 # Linter for Terraform files
 brew "tflint"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -129,11 +134,8 @@ brew "yq"
 brew "controlplaneio-fluxcd/tap/flux-operator", trusted: true
 # Command-line interface for 1Password
 cask "1password-cli"
-# JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
-# Interactive CLI tool for AWS Single Sign-On (SSO)
-cask "theurichde/go-aws-sso/go-aws-sso"
-# Command-line shell and scripting language
+cask "go-aws-sso"
 cask "powershell"
 vscode "4ops.terraform"
 vscode "adamhartford.vscode-base64"
@@ -175,4 +177,3 @@ go "golang.org/x/tools/gopls"
 go "github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb"
 go "honnef.co/go/tools/cmd/staticcheck"
 go "github.com/swaggo/swag/cmd/swag"
-npm "markserv"
