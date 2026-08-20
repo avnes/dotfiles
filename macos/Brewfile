@@ -10,8 +10,6 @@ tap "legit-labs/legit-labs"
 tap "loft-sh/tap"
 tap "one2nc/cloudlens"
 tap "theurichde/go-aws-sso"
-# Run your GitHub Actions locally
-brew "act"
 # Record and share terminal sessions
 brew "asciinema"
 # Cryptography and SSL/TLS Toolkit
@@ -48,8 +46,6 @@ brew "gnu-sed"
 brew "gnupg"
 # Fast linters runner for Go
 brew "golangci-lint"
-# Graph visualization software from AT&T and Bell Labs
-brew "graphviz"
 # Kubernetes package manager
 brew "helm"
 # C/C++ and Java libraries for Unicode and globalization
@@ -58,8 +54,6 @@ brew "icu4c@76"
 brew "infracost"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Domain specific configuration language for defining JSON data
-brew "jsonnet"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
 # Run local Kubernetes cluster in Docker
@@ -84,12 +78,8 @@ brew "kustomize"
 brew "libpq", link: true
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
-# Development kit for the Java programming language
-brew "openjdk"
 # Drop-in replacement for Terraform. Infrastructure as Code Tool
 brew "opentofu"
-# Apache Parquet command-line tools and utilities
-brew "parquet-cli"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Python package management tool
@@ -118,10 +108,6 @@ brew "terraform-docs"
 brew "terragrunt"
 # Linter for Terraform files
 brew "tflint"
-# Programmatically correct mistyped console commands
-brew "thefuck"
-# Terminal multiplexer
-brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Disaster recovery for Kubernetes resources and persistent volumes
@@ -130,12 +116,19 @@ brew "velero"
 brew "watch"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# A utility CLI that helps manage Azure AD Workload Identity and automate error-prone operations:
+brew "azure/azure-workload-identity/azwi", trusted: true
 # Flux Operator CLI
 brew "controlplaneio-fluxcd/tap/flux-operator", trusted: true
+# A Kubernetes Cluster sanitizer and linter!
+brew "derailed/popeye/popeye", trusted: true
+# Flux CLI
+brew "fluxcd/tap/flux", trusted: true
 # Command-line interface for 1Password
 cask "1password-cli"
 cask "adoptopenjdk"
-cask "go-aws-sso"
+# Interactive CLI tool for AWS Single Sign-On (SSO)
+cask "theurichde/go-aws-sso/go-aws-sso", trusted: true
 cask "powershell"
 vscode "4ops.terraform"
 vscode "adamhartford.vscode-base64"
@@ -177,3 +170,4 @@ go "golang.org/x/tools/gopls"
 go "github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb"
 go "honnef.co/go/tools/cmd/staticcheck"
 go "github.com/swaggo/swag/cmd/swag"
+npm "markserv"
