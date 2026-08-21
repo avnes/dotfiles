@@ -1,7 +1,7 @@
 export ZSH="/Users/$USER/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
-plugins=(git kubectl poetry zsh-autosuggestions kubectx aws direnv alias-tips)
+plugins=(git kubectl poetry zsh-autosuggestions aws direnv alias-tips)
 
 DISABLE_MAGIC_FUNCTIONS="true"
 source $ZSH/oh-my-zsh.sh
@@ -37,7 +37,6 @@ alias ll='ls -l'
 alias python=python3
 alias kx='kubie ctx'
 alias gas='go-aws-sso -p saml --persist'
-alias yolo='git add -A && git commit -a -m "$(curl --silent --fail https://whatthecommit.com/index.txt)"'
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
