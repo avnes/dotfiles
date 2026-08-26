@@ -15,8 +15,6 @@ export PATH
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 
-export PATH="/Users/$USER/Library/Python/3.10/bin:$PATH"
-
 export HISTORY_IGNORE="(cat|AWS|SECRET|KEY|base64|secret|export)"
 
 export PYENV_ROOT="$HOME/.pyenv"
