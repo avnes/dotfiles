@@ -2,7 +2,6 @@ tap "azure/azure-workload-identity", "https://github.com/Azure/homebrew-azure-wo
 tap "controlplaneio-fluxcd/tap"
 tap "dotenv-org/brew"
 tap "fluxcd/tap"
-tap "homebrew/services"
 tap "loft-sh/tap"
 tap "theurichde/go-aws-sso"
 # GitOps Continuous Delivery for Kubernetes
