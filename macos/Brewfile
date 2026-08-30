@@ -1,7 +1,5 @@
-tap "1password/tap"
 tap "azure/azure-workload-identity", "https://github.com/Azure/homebrew-azure-workload-identity"
 tap "controlplaneio-fluxcd/tap"
-tap "derailed/popeye"
 tap "dotenv-org/brew"
 tap "fluxcd/tap"
 tap "homebrew/services"
@@ -21,10 +19,6 @@ brew "azure-cli"
 brew "brew-gem"
 # Prevent cloud misconfigurations during build-time for IaC tools
 brew "checkov"
-# Home for bootstrapping, AMI, EKS, and other helpers in Cluster API Provider AWS
-brew "clusterawsadm"
-# Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle
-brew "clusterctl"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # CLI and validation tools for Kubelet Container Runtime Interface (CRI)
@@ -49,8 +43,6 @@ brew "golangci-lint"
 brew "helm"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c@76"
-# Cost estimates for Terraform, Terragrunt, and CloudFormation
-brew "infracost"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -83,8 +75,6 @@ brew "opentofu"
 brew "pkgconf"
 # Python package management tool
 brew "poetry"
-# Command-line shell and scripting language
-brew "powershell", link: false
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Password generator
@@ -123,12 +113,8 @@ brew "controlplaneio-fluxcd/tap/flux-operator", trusted: true
 brew "derailed/popeye/popeye", trusted: true
 # Flux CLI
 brew "fluxcd/tap/flux", trusted: true
-# Command-line interface for 1Password
-cask "1password-cli"
-cask "adoptopenjdk"
 # Interactive CLI tool for AWS Single Sign-On (SSO)
 cask "theurichde/go-aws-sso/go-aws-sso", trusted: true
-cask "powershell"
 vscode "4ops.terraform"
 vscode "adamhartford.vscode-base64"
 vscode "arjun.swagger-viewer"
