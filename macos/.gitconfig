@@ -4,9 +4,6 @@
     signingkey = /Users/audun/.ssh/id_ed25519.pub
 [alias]
 	co = checkout
-	br = branch
-	ci = commit
-	st = status
 [gpg]
 	format = ssh
 [commit]
@@ -15,3 +12,9 @@
 	allowedSignersFile = /Users/audun/.ssh/allowedSignersFile
 [pull]
 	rebase = false
+[credential "https://github.com"]
+        helper =
+        helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+        helper =
+        helper = !/opt/homebrew/bin/gh auth git-credential
